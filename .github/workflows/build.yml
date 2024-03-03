@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
+      fail-fast:false
       matrix:
         os: [windows-latest]
         build_type: [Release]
@@ -12,7 +12,7 @@ jobs:
         include:
           - os: windows-latest
             build_type: Release
-            enable_ui: on
+            enable_ui:on
     steps:
     - uses: actions/checkout@v3
       with:
